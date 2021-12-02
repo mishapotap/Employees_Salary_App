@@ -1,3 +1,21 @@
+# employees-app
+***
+
+This is employees salary control app written on React
+
+***
+
+It contains few filters which you can use to get your info easier
+
+You can:
+- Add new employee to the list
+- Delete employee from the list
+- Use some filters to get your info easier
+- Find the employee easily using the search
+- Check the employees which will get bonus to their salary
+
+This app is in development.....
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
