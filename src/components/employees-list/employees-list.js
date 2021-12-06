@@ -5,7 +5,7 @@ import "./employees-list.css";
 
 // const data(massive) comes from app.js
 //item is each object inside massive
-const EmployeesList = ({ data, onDelete, onToggleIncrease, onToggleRise }) => {
+const EmployeesList = ({ data, onDelete, onToggleProp }) => {
     const elements = data.map((item) => {
         // Destructurisation item for {id} and other 3 object property(name salary and increase) for {itemProps}
         const { id, ...itemProps } = item;
@@ -14,9 +14,8 @@ const EmployeesList = ({ data, onDelete, onToggleIncrease, onToggleRise }) => {
                 key={id}
                 {...itemProps}
                 onDelete={() => onDelete(id)}
-                onToggleIncrease={() => onToggleIncrease(id)}
-                onToggleRise={() => onToggleRise(id)}
-            />
+                onToggleProp={(event) => onToggleProp(id, event.currentTarget.getAttribute("data-toggle"))}
+            /> // Got the key of data attribute to show which prop we clicked: rise or increase (id, prop)
         );
     });
 
