@@ -57,7 +57,7 @@ class App extends Component {
         this.setState(({ data }) => ({
             data: data.map((item) => {
                 if (item.id === id) {
-                    return { ...item, rise: !item.rise };
+                    return { ...item, rise: !item.rise};
                 }
                 return item;
             }),
